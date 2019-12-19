@@ -12,5 +12,8 @@
   "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
   "stylusSupremacy.sortProperties": "grouped",
   "eslint.autoFixOnSave": true,
-  "stylusSupremacy.quoteChar": "\""
+  "stylusSupremacy.quoteChar": "\"",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

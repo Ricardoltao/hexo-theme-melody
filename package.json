@@ -3,8 +3,9 @@
   "version": "1.6.1",
   "description": "hexo-theme-melody hexo theme",
   "scripts": {
-    "cz": "git-cz",
-    "release": "bump-version"
+    "patch": "npm version patch && git push && git push --tags",
+    "minor": "npm version minor && git push && git push --tags",
+    "major": "npm version major && git push && git push --tags"
   },
   "dependencies": {
     "cross-env": "^5.1.3",

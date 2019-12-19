@@ -1,9 +1,6 @@
 headStyle(fontsize)
   padding-left: unit(fontsize + 0.1, "rem")
 
-  code
-    font-size: unit(fontsize, "rem")
-
   &:before
     top: calc(50% - unit(fontsize / 2 - 0.05, "rem"))
     font-size: unit(fontsize, "rem")
@@ -28,7 +25,7 @@ headStyle(fontsize)
   overflow: hidden
 
   &-meta
-    text-shadow: $light-shadow
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
 
   #post-meta
     color: $grey
@@ -86,7 +83,7 @@ headStyle(fontsize)
     text-align: center
 
   #post-title
-    text-shadow: $light-shadow
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
     font-size: 1.3rem
 
   i.fa.fa-angle-right
@@ -281,10 +278,10 @@ img
     line-height: 1.4rem
 
 .fa-clipboard
-  position: absolute
-  top: 0.4rem
+  position: fixed
   right: 10px
   z-index: 1
+  margin-top: -1rem
   color: $highlight-aqua
   cursor: pointer
   transition: color 0.2s
@@ -294,7 +291,7 @@ img
 
 .copy-notice
   position: absolute
-  top: 0
+  top: 4px
   right: 0
   z-index: 1
   background: darken($highlight-background, 5)
@@ -377,11 +374,9 @@ img
     background-attachment: local
 
     #post-title
-      color: $theme-header-text-color
       font-size: 1.1rem
 
   #post-title
-    color: $theme-header-text-color
     font-size: 1.1rem
 
 @media screen and (min-width: $sm)
@@ -398,10 +393,3 @@ img
       iframe
         width: $content-large-width
         height: $iframe-large-height
-
-.katex-wrap
-  overflow: auto
-
-  if hexo-config("katex") && hexo-config("katex.hide_scrollbar")
-    &::-webkit-scrollbar
-      display: none
